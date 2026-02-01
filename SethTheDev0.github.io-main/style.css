@@ -72,8 +72,15 @@ nav a:hover {
 .about-container {
   position: fixed;
   justify-self: right;
-  top: 5px;
-  right: 5px;
+  top: 10px;
+  right: 10px;
+}
+
+.about-text {
+  position: relative;
+  justify-self: center;
+  font-size: medium;
+  font-weight: normal;
 }
 
 .profile-image {
@@ -91,6 +98,7 @@ nav a:hover {
   justify-self: center;
   top: 300px;
   /* text-decoration: underline; */
+
 }
 
 /*
@@ -110,7 +118,7 @@ nav a:hover {
   font-weight: normal;
 }
 
-.gallery-frame {
+.gallery-container {
   position: relative;
   justify-self: left;
   width: 230px;
@@ -126,7 +134,7 @@ nav a:hover {
   overflow: hidden;
 }
 
-.gallery-frame,
+.gallery-container,
 .gallery-icon {
   transition: var(--theme-transition), border-color var(--theme-transition-duration) var(--theme-transition-ease);
   will-change: background-color, border-color;
@@ -138,7 +146,7 @@ nav a:hover {
   object-fit: cover;
 }
 
-.gallery-frame:hover {
+.gallery-container:hover {
   transform: scale(1.05);
   border: 2.3px solid white;
 }

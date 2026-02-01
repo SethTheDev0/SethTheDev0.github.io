@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="SethTheDev - Developer portfolio showcasing game creations and projects" />
-  <title>SethTheDev - Portfolio</title>
+  <title>SethTheDev</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <!-- THEME TOGGLE -->
-  <button id="theme-toggle" aria-label="Toggle between light and dark theme">
-    <img src="assets/light-bulb.png" id="toggle-icon" alt="">
+  <button id="theme-toggle">
+    <img src="assets/light-bulb.png" id="toggle-icon">
   </button>
 
   <!-- HEADER -->
@@ -29,26 +29,28 @@
   <main>
     <!-- ABOUT -->
     <section id="about" class="about-container">
-      <img src="assets/profile.png" alt="SethTheDev profile picture" class="profile-image">
+      <h3 class="about-text">About Me</h3>
+      <img src="assets/profile.png" class="profile-image">
+      <div class="about-text">
+      <!-- <p>Hey there! I'm SethTheDev,</p>
+        <p>Feel free to explore my creations below and reach out if you'd like to collaborate or learn more about my work!</p>
+      -->
+      </div>
     </section>
 
     <!-- CREATIONS -->
-    <section id="creations" class="creations-section">
+    <section id="creations" class="creations-container">
       <div class="creations-header">
-        <h1>Creations</h1>
+        <h1 class ="creations-title">Creations</h1>
       </div>
 
       <!-- GALLERY -->
       <div class="gallery">
-        <article class="gallery-frame">
+        <article class="gallery-container">
           <h3 class="gallery-text">Bananaphobia</h3>
-          <a href="https://www.roblox.com/games/90619700121422/Bananaphobia"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="gallery-icon-link"
-             aria-label="View Bananaphobia game on Roblox">
+          <a href="https://www.roblox.com/games/90619700121422/Bananaphobia" target="_blank" rel="noopener noreferrer" class="gallery-icon-link" aria-label="View Bananaphobia game on Roblox">
             <div class="gallery-icon">
-              <img src="assets/bananaphobia-icon.jpg">
+              <img src="assets/bananaphobia-icon.jpg" alt="Bananaphobia game icon">
             </div>
           </a>
         </article>
@@ -56,7 +58,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-container">
       <!-- Add contact content here later -->
     </section>
   </main>
