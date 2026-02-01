@@ -1,0 +1,169 @@
+/*
+-- THEME VARIABLES
+*/
+:root {
+  /* DEFAULT THEME */
+  --bg-color: rgb(102, 173, 255);
+  --text-color: white;
+  --card-bg: white;
+  --light-bulb-filter: invert(1);
+  --theme-transition-duration: 600ms;
+  --theme-transition-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --theme-transition: background-color var(--theme-transition-duration) var(--theme-transition-ease);
+}
+
+[data-theme="light"] {
+  /* LIGHT THEME */
+  --bg-color: rgb(102, 173, 255);
+}
+
+[data-theme="dark"] {
+  /* DARK THEME */
+  --bg-color: rgb(17 17 18);
+}
+
+/*
+-- GLOBAL STYLES
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: var(--theme-transition);
+}
+
+/*
+-- HEADER
+*/
+header {
+ position: fixed;
+ justify-self: center;
+ top: 5px;
+ text-decoration: underline;
+}
+
+/* Navigation Links */
+nav {
+  position: fixed;
+  justify-self: center;
+  top: 43px;
+  gap: 5px;
+}
+
+/* Navigation Anchor Styles */
+nav a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: yellow;
+}
+
+/*
+-- PROFILE
+*/
+.about-container {
+  position: fixed;
+  justify-self: right;
+  top: 5px;
+  right: 5px;
+}
+
+.profile-image {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  border: 1.5px solid white;
+}
+
+/*
+-- CREATIONS
+*/
+.creations-header {
+  position: relative;
+  justify-self: center;
+  top: 300px;
+  /* text-decoration: underline; */
+}
+
+/*
+-- GALLERY
+*/
+.gallery-grid {
+  position: relative;
+  justify-self: left;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-text {
+  position: relative;
+  justify-self: center;
+  font-size: medium;
+  font-weight: normal;
+}
+
+.gallery-frame {
+  position: relative;
+  justify-self: center;
+  width: 230px;
+  top: 350px;
+  background-color: black;
+  border: 1.5px solid white;
+}
+
+.gallery-icon {
+  aspect-ratio: 1/1;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+.gallery-frame,
+.gallery-icon {
+  transition: var(--theme-transition), border-color var(--theme-transition-duration) var(--theme-transition-ease);
+  will-change: background-color, border-color;
+}
+
+.gallery-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-frame:hover {
+  transform: scale(1.05);
+  border: 2.3px solid white;
+}
+
+/*
+-- THEME TOGGLE
+*/
+#theme-toggle {
+  position: fixed;
+  bottom: 7px;
+  left: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#toggle-icon {
+  width: 31px;
+  height: 29px;
+  filter: var(--light-bulb-filter);
+  transform: scale(1);
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+#toggle-icon.scale-once {
+  transform: scale(1.25) !important;
+}
